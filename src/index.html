@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>G.M.K - Glow. Majestory. Kindness</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#000000">
+  <style>
+    :root {
+      --dourado: #d4af37;
+      --fundo: #1a1a1a;
+      --texto: #ffffff;
+      --cinza: #2e2e2e;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--fundo);
+      color: var(--texto);
+    }
+
+    header {
+      background-color: #111;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      color: var(--dourado);
+    }
+
+    .subtitulo {
+      font-style: italic;
+      color: #ccc;
+      margin-top: 5px;
+    }
+
+    nav {
+      margin-top: 15px;
+    }
+
+    nav button {
+      background: none;
+      border: none;
+      color: var(--dourado);
+      font-weight: bold;
+      font-size: 1.1em;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+    }
+
+    nav button:hover {
+      color: white;
+    }
+
+    main {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .produtos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    .produto {
+      background-color: var(--cinza);
+      border-radius: 10px;
+      padding: 20px;
+      width: 220px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
+      transition: transform 0.3s ease;
+    }
+
+    .produto:hover {
+      transform: scale(1.05);
+    }
+
+    .produto img {
+      width: 100%;
+      border-radius: 6px;
+      margin-bottom: 10px;
+    }
+
+    .produto h3 {
+      margin: 10px 0 5px;
+      color: var(--dourado);
+    }
+
+    .produto p {
+      margin: 5px 0;
+    }
+
+    .produto button {
+      background-color: var(--dourado);
+      color: #000;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s;
+    }
+
+    .produto button:hover {
+      background-color: #b8962e;
+    }
+
+    #mensagem-compra {
+      margin-top: 20px;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #28a745;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #111;
+      color: var(--dourado);
+      text-align: center;
+      padding: 15px;
+      margin-top: 40px;
+    }
+
+    section {
+      display: none;
+    }
+
+    section.active {
+      display: block;
+    }
+
+    @media (max-width: 768px) {
+      .produto {
+        width: 90%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>G.M.K</h1>
+    <p class="subtitulo">Glow. Magic. Kindness</p>
+    <nav>
+      <button onclick="mostrarSecao('inicio')">Início</button>
+      <button onclick="mostrarSecao('sobre')">Sobre Nós</button>
+      <button onclick="mostrarSecao('jogos')">Cansado de esperar?</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SEÇÃO INÍCIO -->
+    <section id="inicio" class="active">
+      <h1 style="text-align:center; color: var(--dourado);">Joias em Destaque</h1>
+      <div id="mensagem-compra"></div>
+      <h2 style="text-align:center; color: var(--dourado);">opções</h2>
+
+      <div class="produtos">
+        <div class="produto">
+          <img src="https://via.placeholder.com/220x150?text=Anel+Luxo" alt="Anel Luxo" />
+          <h3>Anel com rubi</h3>
+          <p>R$ 3.690,00</p>
+          <button onclick="comprar()">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://via.placeholder.com/220x150?text=Colar+Real" alt="Colar Real" />
+          <h3>Colar de prata</h3>
+          <p>R$ 1400,00</p>
+          <button onclick="comprar()">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://via.placeholder.com/220x150?text=Brincos+Perola" alt="Brincos Pérola" />
+          <h3>Brincos  de Pérola</h3>
+          <p>R$ 1299,90</p>
+          <button onclick="comprar()">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://via.placeholder.com/220x150?text=Pulseira+Chic" alt="Pulseira Chic" />
+          <h3>Pulseira de ouro</h3>
+          <p>R$ 1.292,50</p>
+          <button onclick="comprar()">Comprar</button>
+        </div>
+        <div class="produto">
+          <img src="https://via.placeholder.com/220x150?text=Corrente+de+ouro" alt="Corrente de ouro" />
+          <h3>corrente de ouro</h3>
+          <p>R$ 1.1750,50</p>
+          <button onclick="comprar()">Comprar</button>
+        </div>
+      </div>
+    </section>
+    <!-- SEÇÃO SOBRE NÓS -->
+    <section id="sobre">
+      <h2 style="text-align:center; color: var(--dourado);">Sobre Nós</h2>
+      <div style="max-width: 800px; margin: auto; background-color: var(--cinza); padding: 20px; border-radius: 8px; box-shadow: 0 0 15px rgba(212, 175, 55, 0.2);">
+        <p>
+          A <strong>G.M.K</strong> nasceu da paixão por brilho, elegância e o poder das joias em transformar histórias.
+          Fundada em 2022,atravez de um projeto ambiciosode Gustavo,Maisa e Katherine nossa missão é unir sofisticação com empatia – por isso somos <em>Glow, Majestory e Kindness</em>.
+        </p>
+        <p>
+          Cada peça é criada com dedicação, simbolizando poder e gentileza. Representamos mais do que joias:
+          somos um reflexo de personalidade, respeito e arte.Além de transmitir delicadeza desde peças mais sofisticadas até as mais acessiveis!!!
+        </p>
+      </div>
+    </section>
+
+    <!-- SEÇÃO JOGOS -->
+    <section id="jogos">
+      <h2 style="text-align:center; color: var(--dourado);">Enquanto espera, que tal jogar?</h2>
+      <div style="text-align:center; margin-top:20px;">
+        <button onclick="iniciarJogoVelha()">🎮  Iniciar/Reiniciar Jogo da Velha</button>
+      </div>
+
+      <!-- JOGO DA VELHA -->
+      <div id="jogoVelha" class="hidden" style="margin-top: 30px;">
+        <h1 style="color: var(--dourado);">Jogo da Velha</h1>
+        <div id="velhaTabuleiro" style="display: grid; grid-template-columns: repeat(3, 100px); gap: 10px; justify-content: center;"></div>
+      </div>
+      <h1 style="text-align:center; color: var(--dourado);"> Segunda opção</h1>
+      <!-- CAMPO MINADO -->
+      <div id="campoMinado" class="hidden" style="margin-top: 30px;">
+        <h1 style="color: var(--dourado);">Campo Minado</h1>
+        <label for="tamanho" style="color: white;">Tamanho:</label>
+        <select id="tamanho">
+          <option value="5">5x5</option>
+          <option value="6">6x6</option>
+          <option value="8">8x8</option>
+        </select>
+        <button onclick="gerarCampo()">Iniciar Jogo</button>
+        <div id="cronometro" style="margin: 10px 0; font-weight: bold;">⏱️ Tempo: 0s</div>
+        <div id="campo" style="display: grid; gap: 5px; justify-content: center;"></div>
+      </div>
+    </section>
+  </main>
+
+
+  <script>
+
+    // Alterna seções do site
+    function mostrarSecao(secaoId) {
+      const secoes = document.querySelectorAll("main > section");
+      secoes.forEach(sec => sec.classList.remove("active"));
+      document.getElementById(secaoId).classList.add("active");
+    }
+
+    // Função compra
+    function comprar() {
+      const msg = document.getElementById("mensagem-compra");
+      msg.innerHTML = "✅ Pedido registrado com sucesso! Aguarde a entrega.";
+      setTimeout(() => msg.innerHTML = "", 5000);
+    }
+
+    // JOGO DA VELHA
+    function iniciarJogoVelha() {
+      document.getElementById("jogoVelha").classList.remove("hidden");
+      document.getElementById("campoMinado").classList.add("hidden");
+
+      const tabuleiro = document.getElementById("velhaTabuleiro");
+      tabuleiro.innerHTML = "";
+      let jogador = "X";
+      let estado = Array(9).fill("");
+
+      for (let i = 0; i < 9; i++) {
+          const btn = document.createElement("button");
+          btn.style.width = "100px";
+          btn.style.height = "100px";
+          btn.style.fontSize = "2em";
+          btn.style.background = "#333";
+          btn.style.color = "white";
+          btn.style.border = "2px solid var(--dourado)";
+        btn.onclick = () => {
+            if (btn.innerText === "") {
+                btn.innerText = jogador;
+            estado[i] = jogador;
+            if (verificarVitoria(estado, jogador)) {
+                alert(`🎉 ${jogador} venceu!`);
+                iniciarJogoVelha();
+            } else if (estado.every(c => c !== "")) {
+                alert("🤝 Empate!");
+                iniciarJogoVelha();
+            } else {
+                jogador = jogador === "X" ? "O" : "X";
+            }
+        }
+    };
+    tabuleiro.appendChild(btn);
+}
+    }
+
+    function verificarVitoria(est, j) {
+      const linhas = [
+          [0,1,2],[3,4,5],[6,7,8],
+        [0,3,6],[1,4,7],[2,5,8],
+        [0,4,8],[2,4,6]
+      ];
+      return linhas.some(l => l.every(i => est[i] === j));
+    }
+
+    // CAMPO MINADO
+    let tempo = 0;
+    let cronometroInterval;
+
+    function iniciarCampoMinado() {
+        document.getElementById("campoMinado").classList.remove("hidden");
+        document.getElementById("jogoVelha").classList.add("hidden");
+    }
+
+    function gerarCampo() {
+        clearInterval(cronometroInterval);
+        tempo = 0;
+        document.getElementById("cronometro").innerText = "⏱️ Tempo: 0s";
+        cronometroInterval = setInterval(() => {
+            tempo++;
+        document.getElementById("cronometro").innerText = `⏱️ Tempo: ${tempo}s`;
+    }, 1000);
+
+    const campo = document.getElementById("campo");
+    campo.innerHTML = "";
+    const tamanho = parseInt(document.getElementById("tamanho").value);
+    const minas = Math.floor(tamanho * tamanho * 0.2);
+      const matriz = Array.from({ length: tamanho }, () => Array(tamanho).fill(0));
+
+      campo.style.gridTemplateColumns = `repeat(${tamanho}, 40px)`;
+
+      // Coloca as minas
+      let colocadas = 0;
+      while (colocadas < minas) {
+          let x = Math.floor(Math.random() * tamanho);
+          let y = Math.floor(Math.random() * tamanho);
+        if (matriz[x][y] !== "💣") {
+          matriz[x][y] = "💣";
+          colocadas++;
+        }
+    }
+
+    for (let i = 0; i < tamanho; i++) {
+        for (let j = 0; j < tamanho; j++) {
+          const btn = document.createElement("button");
+          btn.style.width = "40px";
+          btn.style.height = "40px";
+          btn.style.backgroundColor = "#444";
+          btn.style.color = "white";
+          btn.style.border = "1px solid #666";
+          btn.style.fontWeight = "bold";
+          btn.onclick = () => {
+              if (matriz[i][j] === "💣") {
+                  btn.innerText = "💣";
+                  alert("💥 Você perdeu!");
+                  clearInterval(cronometroInterval);
+              gerarCampo();
+            } else {
+                const num = contarMinas(i, j, matriz, tamanho);
+                btn.innerText = num;
+                btn.disabled = true;
+                btn.style.backgroundColor = "#222";
+                btn.style.color = "#d4af37";
+            }
+          };
+          campo.appendChild(btn);
+        }
+      }
+    }
+
+    function contarMinas(x, y, mat, tamanho) {
+      let count = 0;
+      for (let i = x - 1; i <= x + 1; i++) {
+        for (let j = y - 1; j <= y + 1; j++) {
+            if (i >= 0 && i < tamanho && j >= 0 && j < tamanho && mat[i][j] === "💣") {
+                count++;
+          }
+        }
+      }
+      return count;
+    }
+     if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("service-worker.js")
+      .then(() => console.log("Service Worker registrado"))
+      .catch(err => console.log(" Erro no SW:", err));
+     }
+    </script>
+    <footer>
+  <p>&copy; 2025 G.M.K - Todos os direitos reservados</p>
+  <a href="https://www.instagram.com/___g.m.k?igsh=ZmVtdHR3Z3ZmNXpy" 
+     target="_blank" 
+     style="color: white; text-decoration: none;">
+     Instagram
+  </a>
+</footer>
+</body>
+</html>
