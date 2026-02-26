@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taverna Waitomo</title>
+    <link rel="stylesheet" href="restaurante.css">
+    <style>
+
+
+
+.section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #030303;
+}
+
+.section-text {
+    max-width: 800px;
+    margin: 0 auto 20px auto;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.attractions-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+    cursor: pointer;
+}
+
+.attraction-card {
+    background-color: #bdd1de;
+    padding: 25px;
+    border-radius: 12px;
+    width: 300px;
+    box-shadow: 0 0 15px rgba(255, 211, 105, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.attraction-card:hover {
+    transform: scale(1.05);
+}
+
+.attraction-title {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #070707;
+}
+
+.attraction-text {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #0e0d0d;
+    font-weight: bold;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <h1>Taverna Waitomo</h1>
+        <nav>
+            <a href="#principal" class="botoes"><button>Seção Principal</button></a>
+            <a href="#conteudos" class="botoes"><button>Conteúdos</button></a>
+            <a href="#atraçoes" class="botoes"><button>Atraçoes</button></a> 
+        </nav>
+        <div class="menu">
+                <a href="restaurante2.html">Preços</a>
+                <a href="restaurante3.html">sobre nós</a>
+        </div>
+        
+    </header>
+
+<section id="principal">
+    <h2>nosso espaço</h2>
+    <div class="carrossel">
+        <img src="foto1.jpg" class="ativa">
+        <img src="foto2.jpg">
+        <img src="foto3.png">
+    </div>
+    <div class="botoes">
+        <button onclick="anterior()">Anterior</button>
+        <button onclick="proximo()">Próximo</button>
+    </div>
+    </section>
+
+<section id="conteudos">
+  
+  <h1>✨ Cardápio de Bebidas</h1>          
+
+<h2🧪 POÇÕES LUMINOSAS (Sem Álcool)></h2>
+
+<h2>Brilho das Cavernas </h2><br>
+<p> Bebida feita com limão siciliano espremido na hora, hortelã fresca macerada e leve toque de maçã verde,
+    finalizada com pérolas cintilantes comestíveis. Servida bem gelada,
+    possui coloração esverdeada translúcida com pequenos pontos brilhantes que lembram as luzes naturais das cavernas de Waitomo. Refrescante e levemente ácida,
+    é como uma poderosa poção de energia e renovação.</p> 
+
+<h2>Lágrimas da Lua Azul</h2><br>
+<p> Preparada com limonada artesanal e concentrado natural de blueberry,
+     essa bebida apresenta uma tonalidade azul intensa com reflexos prateados de glitter alimentício. Servida com gelo, é cítrica na medida certa,
+      com um toque adocicado suave no final. Sua aparência lembra um frasco mágico iluminado pela lua</p> <br>
+
+<h2>Elixir da Coragem </h2><br>
+<p>Combinação vibrante de morango, laranja e maracujá, levemente gaseificada para trazer sensação de efervescência. De coloração avermelhada intensa,
+     é servida extremamente gelada e possui aroma frutado marcante. Seu sabor equilibra doçura e acidez,
+     como uma poção criada para despertar bravura antes de uma grande batalha</p><br>
+
+<h2>Poção da Floresta Encantada </h2><br>
+<p>Mistura tropical de abacaxi fresco, kiwi e água de coco, com folhas de hortelã para finalizar. De tom verde-claro natural, é servida gelada e possui textura leve e refrescante. O sabor é suave e equilibrado,
+     remetendo à sensação de frescor ao atravessar uma floresta mística ao amanhecer.</p> <br>
+
+<h2>Névoa do Oráculo </h2><br>
+<p>Suco de uva integral encorpado, servido gelado e finalizado com uma delicada espuma cremosa de frutas vermelhas e leve toque de baunilha. Sua coloração roxa profunda contrasta com a camada clara no topo, criando o efeito visual de uma névoa mística. Doce, suave e envolvente,
+ como uma bebida preparada para revelar visões do futuro.</p> <br>
+
+
+ 
+ <h1>🔥 TÔNICOS DA GUILDA (Com Álcool)</h1>
+
+<h2>*Espada de Cristal</h2>
+<p>Drink refinado preparado com gin, água tônica artesanal, fatias de limão siciliano e ramo de alecrim fresco. Servido em taça alta com bastante gelo, possui aparência translúcida e elegante. Aromático e levemente cítrico,
+     transmite frescor e sofisticação — como uma lâmina lendária recém-forjada.</p> .<br>
+
+<h2>*Chama do Dragão </h2><br>
+<p>Mistura intensa de vodka com frutas vermelhas maceradas e toque sutil de pimenta rosa. De coloração vermelha vibrante, é servido gelado e apresenta aroma frutado com leve picância no final. Seu sabor começa doce e termina com um calor suave,
+     lembrando a chama controlada de uma criatura mítica</p> .<br>
+
+<h2>*Sussurro Sombrio </h2><br>
+<p>Preparado com rum escuro, café encorpado e licor de chocolate, finalizado com espuma cremosa. De tonalidade marrom profunda, quase negra, é servido gelado e possui sabor intenso e marcante. A combinação de doce e amargo cria uma experiência envolvente,
+     como uma bebida saída das sombras de uma antiga taverna</p> .<br>
+
+<h2>*Aurora da Rainha </h2><br>
+<p>Coquetel leve feito com espumante e licor de pêssego, decorado com frutas douradas. Sua coloração clara com reflexos rosados e dourados transmite elegância. Servido bem gelado, possui sabor delicado,
+     levemente adocicado e refrescante — como uma celebração digna da realeza.
+</p><br>
+
+<h2>*Código Secreto</h2><br>
+<p>Drink azul vibrante feito com vodka, curaçau blue e suco de limão fresco, servido com efeito defumado apresentado à mesa. Gelado e levemente cítrico,
+     possui aroma marcante e aparência enigmática. A fumaça que envolve o copo cria a sensação de estar abrindo um artefato mágico proibido</p><br>
+
+
+ <h1>☕ BEBIDAS QUENTES ENCANTADAS</h1>
+
+<h2>*Chocolate da Taverna </h2><br>
+<p>Chocolate quente cremoso preparado com cacau selecionado, leite vaporizado e especiarias suaves como canela e noz-moscada.
+     Finalizado com marshmallows levemente tostados. Textura aveludada e aroma envolvente, perfeito para noites frias na taverna.</p>
+
+<h2>*Café do Guardião </h2><br>
+<p>Café especial recém-passado, servido quente com toque de canela, chantilly artesanal e fio de caramelo.
+     Equilibrado entre amargor e doçura, é ideal para quem precisa de foco e energia.</p><br>
+
+<h2>*Chá do Viajante </h2><br>
+<p>Infusão quente de ervas selecionadas e frutas secas, servida em bule individual. Aroma delicado e sabor reconfortante,
+     perfeito para descansar após uma longa jornada.</p><br>
+
+<h1> 🧃 PARA JOVENS AVENTUREIROS</h1>
+
+<h2>*Explosão Arco-Íris </h2><br>
+<p>Bebida gaseificada multicolorida com sabores frutados misturados e algodão doce no topo. Servida gelada,
+     possui aparência vibrante e divertida, como um experimento mágico bem-sucedido.</p> <br>
+
+<h2>*Milkshake Estelar <br></h2>
+<p>Milkshake cremoso de baunilha com calda azul cintilante e biscoito artesanal. Textura espessa e suave, servido gelado,
+     com aparência que lembra o céu noturno iluminado por estrelas.</p><br>.
+
+<h3>📜 *Todos os nossos drinks são preparados artesanalmente. Consulte opções sem açúcar ou sem lactose com nossos atendentes.*</h3>
+
+</section>
+<section id="lanches">
+   <h1>🍽️ Cardápio de Alimentos</h1>          
+
+<h1>🗡️ ENTRADAS DA GUILDA</h1>
+
+<h2>Tábuas do Aventureiro </h2><br>
+<p>Seleção especial de queijos variados, salames artesanais, azeitonas temperadas e pão rústico recém-aquecido. Servida em tábua de madeira, é perfeita para compartilhar entre companheiros de jornada. Sabores intensos e marcantes que remetem aos grandes banquetes das antigas tavernas.</p><br>
+
+<h2>Pergaminhos Crocantes </h2><br>
+<p>Rolinhos dourados e crocantes recheados com frango temperado e cream cheese, fritos até atingirem textura perfeitamente crocante por fora e cremosa por dentro. Servidos quentes, são como pequenos pergaminhos recheados com segredos saborosos.</p><br>
+
+<h2>Escudos Dourados </h2><br>
+<p>Discos de batata empanados e recheados com cheddar cremoso e bacon crocante. Servidos bem quentes, possuem exterior dourado e interior macio e saboroso, como escudos forjados para proteger qualquer aventureiro da fome.</p><br>
+
+<h2>Chamas da Forja </h2><br>
+<p>Iscas de frango empanadas e temperadas com especiarias especiais da casa, servidas com molho levemente picante. Crocantes por fora e suculentas por dentro, trazem o calor e a intensidade de uma forja em pleno funcionamento.</p><br>
+
+<h2>Runas do Mar </h2><br>
+<p>Anéis de lula empanados e fritos até ficarem levemente dourados, acompanhados de molho cítrico artesanal. Textura macia e sabor suave do mar, combinados com crocância perfeita.</p><br>
+
+
+<h1>⚔️ PRATOS PRINCIPAIS</h1>
+
+<h2>Banquete do Rei Caído </h2><br>
+<p>Costela suína assada lentamente por horas, envolta em molho barbecue artesanal levemente adocicado e defumado. Acompanha batatas rústicas e legumes salteados na manteiga. Um prato robusto, suculento e digno de um verdadeiro banquete real.</p><br>
+
+<h2>Espada do Guardião </h2><br>
+<p>Filé mignon grelhado no ponto escolhido, finalizado com molho de ervas finas. Servido com arroz cremoso e vegetais salteados. Macio, suculento e equilibrado, representa força e elegância em cada corte.</p><br>
+
+<h2>Travessia das Terras Distantes </h2><br>
+<p>Risoto cremoso de cogumelos frescos preparado lentamente, finalizado com parmesão e ervas aromáticas. Textura aveludada e sabor marcante, ideal para quem aprecia uma jornada gastronômica mais delicada e sofisticada.</p><br>
+
+<h2>Tempestade Escarlate </h2><br>
+<p>Massa artesanal envolvida em molho de tomate rústico e temperos especiais da casa, acompanhada de almôndegas suculentas. Prato intenso e reconfortante, com sabor marcante e levemente encorpado.</p><br>
+
+<h2>Aliança dos Mares</h2><br>
+<p>Salmão grelhado com crosta de ervas, servido com purê de batata cremoso e legumes grelhados. Textura macia e sabor delicado, equilibrando frescor e sofisticação.</p><br>
+
+
+<h1>🛡️ OPÇÕES DA TAVERNA (Burgers & Lanches)</h1>
+
+<h2>Martelo do Ferreiro </h2><br>
+<p>Hambúrguer artesanal suculento, coberto com queijo cheddar derretido e cebola caramelizada, servido no pão brioche macio com molho especial da casa. Acompanha batatas rústicas crocantes.</p><br>
+
+<h2>Caçador da Noite </h2><br>
+<p>Hambúrguer artesanal com bacon crocante, queijo prato, alface fresca e molho defumado. Servido no pão levemente tostado, combina sabor intenso e textura equilibrada. Acompanha batatas rústicas.</p><br>
+
+<h2>Portal Dourado (Vegetariano)</h2><br>
+<p>Hambúrguer de grão-de-bico temperado com ervas finas, queijo derretido, rúcula fresca e molho especial no pão australiano. Opção leve e saborosa, acompanhada de batatas rústicas.</p><br>
+
+
+<h1>🍰 SOBREMESAS ENCANTADAS</h1>
+
+<h2>Tesouro Escondido</h2><br>
+<p>Brownie de chocolate intenso servido quente, acompanhado de sorvete de creme e calda de chocolate. Contraste perfeito entre quente e gelado, revelando um verdadeiro tesouro a cada colherada.</p><br>
+
+<h2>Lua de Cristal</h2><br>
+<p>Cheesecake cremoso com base crocante, coberto com calda de frutas vermelhas levemente ácida. Textura suave e delicada, com apresentação elegante.</p><br>
+
+<h2>Poção Doce da Feiticeira</h2><br>
+<p>Mousse de maracujá leve e aerado, finalizado com crocante de chocolate. Equilíbrio entre acidez e doçura, criando uma sobremesa encantadora e refrescante.</p><br>
+
+<h2>Estrelas de Waitomo</h2><br>
+<p>Petit gâteau com exterior macio e interior cremoso de chocolate, servido com sorvete artesanal. Ao cortar, o recheio escorre como estrelas brilhando na escuridão.</p><br>
+
+
+<h3>📜 *Todos os pratos são preparados com ingredientes selecionados. Consulte nossa equipe para opções vegetarianas ou adaptações alimentares.*</h3>
+</section>
+<section id="atraçoes">
+    <section class="section">
+    <h1 class="section-title">🎭 Atrações da Taverna</h1>
+
+    <div class="attractions-container">
+
+        <div class="attraction-card">
+            <h2 class="attraction-title">🧙 Noite Temática da Guilda</h2>
+            <p class="attraction-text">
+                Evento interativo com missões simbólicas, desafios e quizzes.
+                Ideal para grupos que gostam de competição leve e diversão temática.
+                de segunda a quarta das 19h as 22h
+            </p>
+        </div>
+
+        <div class="attraction-card">
+            <h2 class="attraction-title">🎤 Karaokê das Lendas</h2>
+            <p class="attraction-text">
+                Espaço para cantar trilhas e aberturas marcantes,
+                com palco decorado e iluminação especial.
+                terça e quinta das 16h as 18h
+            </p>
+        </div>
+
+        <div class="attraction-card">
+            <h2 class="attraction-title">🎲 Arena dos Desafios</h2>
+            <p class="attraction-text">
+                Área com jogos de tabuleiro e desafios estratégicos,
+                incentivando interação e entretenimento em grupo.
+
+            </p>
+        </div>
+
+        <div class="attraction-card">
+            <h2 class="attraction-title">📸 Portal das Memórias</h2>
+            <p class="attraction-text">
+                Espaço com cenários temáticos e acessórios
+                para registrar momentos especiais.
+
+            </p>
+        </div>
+
+        <div class="attraction-card">
+            <h2 class="attraction-title">🎭 Performances Temáticas</h2>
+            <p class="attraction-text">
+                Apresentações com atores caracterizados,
+                tornando a experiência ainda mais imersiva.
+                aos sabados das 14h as 16h
+            </p>
+        </div>
+
+        <div class="attraction-card">
+            <h2 class="attraction-title">🕯️ Histórias à Luz de Velas</h2>
+            <p class="attraction-text">
+                Sessão especial com narração de aventuras
+                em ambiente intimista e mágico.
+                segunda a sexta das 19h as 22:30h
+            </p>
+        </div>
+
+    </div>
+</section>
+</section>
+<footer>
+    <div id="footer">
+            <p>o melhor restaurante que voce vai conhecer</p>
+            </div>
+    © 2026  📞 4002-8922 <br><br>
+    todos os direitos reservados a Taverna Waitomo
+
+
+
+</footer>
+<script src="restaurante.js"></script>
+</body>
+</html>
